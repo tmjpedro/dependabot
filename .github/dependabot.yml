@@ -1,0 +1,16 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "[dependabot]"
+    # Disable version updates for npm dependencies
+    open-pull-requests-limit: 0
+    groups:
+      minor-and-patch:
+        applies-to: security-updates
+        update-types:
+          - "patch"
+          - "minor"
